@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsiolkovsky Equation Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tsiolkovsky Equation Calculator</h1>
+        <form id="inputForm">
+            <label for="massRatioStart">Mass Ratio Start:</label>
+            <input type="number" id="massRatioStart" name="massRatioStart" step="any">
+            <label for="massRatioEnd">Mass Ratio End:</label>
+            <input type="number" id="massRatioEnd" name="massRatioEnd" step="any">
+            <label for="exitVelocityStart">Exit Velocity Start:</label>
+            <input type="number" id="exitVelocityStart" name="exitVelocityStart" step="any">
+            <label for="exitVelocityEnd">Exit Velocity End:</label>
+            <input type="number" id="exitVelocityEnd" name="exitVelocityEnd" step="any">
+            <label for="deltaVStart">Delta V Start:</label>
+            <input type="number" id="deltaVStart" name="deltaVStart" step="any">
+            <label for="deltaVEnd">Delta V End:</label>
+            <input type="number" id="deltaVEnd" name="deltaVEnd" step="any">
+            <label for="steps">Steps:</label>
+            <input type="number" id="steps" name="steps" required>
+            <button type="button" onclick="calculateAndDisplay()">Calculate</button>
+        </form>
+        <h2>Results</h2>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Mass Ratio</th>
+                    <th>Exit Velocity</th>
+                    <th>Delta V</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="downloadCSV()">Download CSV</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
